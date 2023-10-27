@@ -1,0 +1,60 @@
+{
+	"entidad": {
+		"prefix" : "entidadBase",
+		"body": [
+			"namespace Dominio.Entities;",
+				"",
+				"\tpublic class ${1:Nombreclase} : BaseEntity",
+				"\t{",
+				"",
+
+				"",
+				"\t}"
+
+		],
+		"description": "snipet para crear la estructura base de unaentidad"
+	},
+	"atributo-int": {
+		"prefix" : "atributo-int",
+		"body": [
+			"public int ${1:Nombre} { get; set; }",
+		],
+		"description": "snipet para crear una propiedad int"
+	},
+	"atributo-string": {
+		"prefix" : "atributo-string",
+		"body": [
+			"public string ${1:Nombre} { get; set; }",
+		],
+		"description": "snipet para crear una propiedad string"
+	},
+	"atributo-double": {
+		"prefix" : "atributo-double",
+		"body": [
+			"public double ${1:Nombre} { get; set; }",
+		],
+		"description": "snipet para crear una propiedad double"
+	},
+	"atributo-DateTime": {
+		"prefix" : "atributo-DateTime",
+		"body": [
+			"public DateTime ${1:Nombre} { get; set; }",
+		],
+		"description": "snipet para crear una propiedad DateTime"
+	},
+	"relacion-uno": {
+		"prefix" : "relacion-uno",
+		"body": [
+			"public int ${1:NombreId} { get; set; }",
+			"public ${2:NombreClase} ${3:NombreBd} { get; set; }",
+		],
+		"description": "snipet para crear una relacion de uno a muchos"
+	},
+	"relacion-muchos": {
+		"prefix" : "relacion-muchos",
+		"body": [
+			"public ICollection<${1:NombreClase}> ${2:NombreBd}{ get; set; }"
+		],
+		"description": "snipet para crear una coleccion"
+	}
+}
